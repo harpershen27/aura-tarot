@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>灵气塔罗 · Aura Tarot</title>
+  <meta name="description" content="灵气塔罗 — 静心凝神，向牌灵倾听你心中的解惑。" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="question">
+
+  <div id="zodiac-slot"></div>
+
+  <main class="stage">
+    <div class="container">
+
+      <div class="rise-in">
+        <span class="eyebrow">Aura Tarot</span>
+        <h1 class="title-cjk">灵气塔罗</h1>
+        <p class="subtitle">静心凝神，向牌灵倾听你心中的解惑</p>
+      </div>
+
+      <form class="panel rise-in-2" id="q-panel" autocomplete="off" onsubmit="return false;">
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+
+        <div class="panel-label">向牌灵提问</div>
+        <textarea
+          id="question"
+          class="question-input"
+          rows="3"
+          maxlength="200"
+          placeholder="例如：我近期的事业方向如何？"
+          aria-label="你的问题"
+        ></textarea>
+
+        <div class="panel-foot">
+          <span><kbd>Ctrl</kbd> + <kbd>Enter</kbd> 快捷提交</span>
+          <span id="counter">0 / 200</span>
+        </div>
+      </form>
+
+      <div class="rise-in-3" style="text-align:center;">
+        <button id="submit" class="btn-mystic" type="button">
+          开始抽牌
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/cards.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

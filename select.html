@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>选牌 · 灵气塔罗</title>
+  <meta name="description" content="灵气塔罗 — 静心凝神，向牌灵倾听你心中的解惑。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="select">
+
+  <div id="zodiac-slot"></div>
+
+  <main class="stage stage--top">
+    <div class="container">
+
+      <header class="rise-in" style="text-align:center; margin-bottom: 32px;">
+        <h1 class="section-title" style="margin-bottom:8px;">选牌</h1>
+        <p class="section-hint" style="margin-bottom:0;">
+          长按卡牌 1 秒选中 · <span id="progress">已选 0 / 3</span>
+        </p>
+      </header>
+
+      <div class="arc rise-in-2" id="arc">
+        <div class="ring" id="ring"></div>
+        <div class="ring-hint">拖动旋转牌阵 · 中央卡牌为聚焦</div>
+      </div>
+
+      <div class="slots rise-in-3">
+        <div class="slot">
+          <div class="slot-label">过去</div>
+          <div class="slot-frame" data-pos="0"></div>
+        </div>
+        <div class="slot">
+          <div class="slot-label">现在</div>
+          <div class="slot-frame" data-pos="1"></div>
+        </div>
+        <div class="slot">
+          <div class="slot-label">未来</div>
+          <div class="slot-frame" data-pos="2"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/cards.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

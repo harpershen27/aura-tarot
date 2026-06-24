@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>解读 · 灵气塔罗</title>
+  <meta name="description" content="灵气塔罗 — 静心凝神，向牌灵倾听你心中的解惑。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/config.js"></script>
+</head>
+<body data-page="reading">
+
+  <div id="zodiac-slot"></div>
+
+  <main class="stage stage--top">
+    <div class="container">
+
+      <header class="rise-in" style="text-align:center; margin-bottom: 28px;">
+        <h1 class="section-title" style="margin-bottom:10px;">解读</h1>
+        <p class="reading-question">
+          你的问题：<strong id="q-echo">…</strong>
+        </p>
+      </header>
+
+      <section class="spread rise-in-2" id="spread"></section>
+
+      <section class="panel interpretation rise-in-3">
+        <span class="corner-tr"></span>
+        <span class="corner-bl"></span>
+        <div class="interpretation-head">
+          <span class="gap"></span>
+          <span>灵谕</span>
+          <span class="gap"></span>
+        </div>
+        <div class="interpretation-body" id="interpretation">
+
+          <!-- AI reading — populated by DeepSeek -->
+          <div id="ai-reading">
+            <p class="lede ai-lede" id="ai-opening"></p>
+            <div class="reading-block rise-in" style="animation-delay:0.1s">
+              <div class="reading-block-head">
+                <span class="reading-position">过去</span>
+              </div>
+              <p class="reading-body" id="ai-past"></p>
+            </div>
+            <div class="reading-block rise-in" style="animation-delay:0.25s">
+              <div class="reading-block-head">
+                <span class="reading-position">现在</span>
+              </div>
+              <p class="reading-body" id="ai-present"></p>
+            </div>
+            <div class="reading-block rise-in" style="animation-delay:0.4s">
+              <div class="reading-block-head">
+                <span class="reading-position">未来</span>
+              </div>
+              <p class="reading-body" id="ai-future"></p>
+            </div>
+            <div class="reading-synthesis rise-in" style="animation-delay:0.6s">
+              <div class="synthesis-head">灵 · 综</div>
+              <p class="synthesis-body" id="ai-synthesis-body"></p>
+            </div>
+            <p class="reading-whisper rise-in" style="animation-delay:0.8s">—— 牌灵低语：<span id="ai-whisper"></span></p>
+            <p class="ai-source" id="ai-source"></p>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="rise-in-4" style="text-align:center; margin-top: 24px;">
+        <button id="redraw" class="btn-mystic" type="button">
+          重新占卜
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/cards.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/chrome.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
